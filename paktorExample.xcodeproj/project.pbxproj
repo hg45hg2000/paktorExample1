@@ -1,0 +1,1009 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2320925ED4CABCFE782FC9BE /* Pods_paktorExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC6F1C1E0A83DD2BA094F6E /* Pods_paktorExampleTests.framework */; };
+		4811630E1EA5E9C600E7AA92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4811630D1EA5E9C600E7AA92 /* main.m */; };
+		481163111EA5E9C600E7AA92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 481163101EA5E9C600E7AA92 /* AppDelegate.m */; };
+		481163171EA5E9C600E7AA92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481163151EA5E9C600E7AA92 /* Main.storyboard */; };
+		481163191EA5E9C600E7AA92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481163181EA5E9C600E7AA92 /* Assets.xcassets */; };
+		4811631C1EA5E9C600E7AA92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4811631A1EA5E9C600E7AA92 /* LaunchScreen.storyboard */; };
+		481163271EA5E9C600E7AA92 /* paktorExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 481163261EA5E9C600E7AA92 /* paktorExampleTests.m */; };
+		481163321EA5E9C600E7AA92 /* paktorExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 481163311EA5E9C600E7AA92 /* paktorExampleUITests.m */; };
+		481163481EA5F96B00E7AA92 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 481163471EA5F96B00E7AA92 /* UIViewController+Category.m */; };
+		481163761EA5FD7100E7AA92 /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481163711EA5FD7100E7AA92 /* MainTabbarController.m */; };
+		481164011EA9BB8700E7AA92 /* PersonProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 481163FD1EA9BB8700E7AA92 /* PersonProfileCell.m */; };
+		481164021EA9BB8700E7AA92 /* PersonProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481163FE1EA9BB8700E7AA92 /* PersonProfileCell.xib */; };
+		481164091EA9BB9500E7AA92 /* CollectionPushAndPoppable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481164061EA9BB9500E7AA92 /* CollectionPushAndPoppable.swift */; };
+		4811640A1EA9BB9500E7AA92 /* PopInAndOutAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481164071EA9BB9500E7AA92 /* PopInAndOutAnimator.swift */; };
+		4811640B1EA9BB9500E7AA92 /* UIView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481164081EA9BB9500E7AA92 /* UIView+Screenshot.swift */; };
+		481164111EA9BCA500E7AA92 /* stackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 481164101EA9BCA500E7AA92 /* stackLayout.m */; };
+		481164141EA9BDE100E7AA92 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481164121EA9BDE100E7AA92 /* HomePageController.swift */; };
+		481164151EA9BDE100E7AA92 /* HomePageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481164131EA9BDE100E7AA92 /* HomePageController.xib */; };
+		481164181EA9C24300E7AA92 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481164171EA9C24300E7AA92 /* Color.swift */; };
+		4811641B1EA9DC7000E7AA92 /* ChoiceImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811641A1EA9DC7000E7AA92 /* ChoiceImageView.swift */; };
+		4811641D1EA9E90A00E7AA92 /* ProFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811641C1EA9E90A00E7AA92 /* ProFileView.swift */; };
+		481164231EA9F8DA00E7AA92 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481164221EA9F8DA00E7AA92 /* ChatViewController.m */; };
+		481164291EA9F8EB00E7AA92 /* InterestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481164281EA9F8EB00E7AA92 /* InterestController.m */; };
+		4811642D1EA9F95000E7AA92 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4811642C1EA9F95000E7AA92 /* BaseViewController.m */; };
+		481164321EAA0A2700E7AA92 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481164301EAA0A2700E7AA92 /* UserProfileController.swift */; };
+		485D0FC11EB74EFF006DEFAD /* StretchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FB61EB74EFF006DEFAD /* StretchHeader.swift */; };
+		485D0FC41EB74EFF006DEFAD /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FBB1EB74EFF006DEFAD /* TagViewCell.swift */; };
+		485D0FC51EB74EFF006DEFAD /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FBC1EB74EFF006DEFAD /* FlowLayout.swift */; };
+		485D0FC61EB74EFF006DEFAD /* InformCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FBD1EB74EFF006DEFAD /* InformCell.swift */; };
+		485D0FC71EB74EFF006DEFAD /* InformCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485D0FBE1EB74EFF006DEFAD /* InformCell.xib */; };
+		485D0FC81EB74EFF006DEFAD /* TagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FBF1EB74EFF006DEFAD /* TagTableCell.swift */; };
+		485D0FC91EB74EFF006DEFAD /* TagTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485D0FC01EB74EFF006DEFAD /* TagTableCell.xib */; };
+		485D0FD41EB86B71006DEFAD /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FD21EB86B71006DEFAD /* TagCell.swift */; };
+		485D0FD51EB86B71006DEFAD /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485D0FD31EB86B71006DEFAD /* TagCell.xib */; };
+		7D9E9C354801663D59A47889 /* Pods_paktorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A9B01D3DBF2CDBE92E9066 /* Pods_paktorExample.framework */; };
+		CB847238B4A8F14E42BD33EE /* Pods_paktorExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA542C360B68B2854B43C19 /* Pods_paktorExampleUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		481163231EA5E9C600E7AA92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 481163011EA5E9C600E7AA92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 481163081EA5E9C600E7AA92;
+			remoteInfo = paktorExample;
+		};
+		4811632E1EA5E9C600E7AA92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 481163011EA5E9C600E7AA92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 481163081EA5E9C600E7AA92;
+			remoteInfo = paktorExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EC091000C54FAD39138AB7D /* Pods-paktorExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExampleTests/Pods-paktorExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		12A9B01D3DBF2CDBE92E9066 /* Pods_paktorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paktorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA542C360B68B2854B43C19 /* Pods_paktorExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paktorExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7453C4D02DC7727E8D4613 /* Pods-paktorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExample/Pods-paktorExample.debug.xcconfig"; sourceTree = "<group>"; };
+		481163091EA5E9C600E7AA92 /* paktorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paktorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4811630D1EA5E9C600E7AA92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4811630F1EA5E9C600E7AA92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		481163101EA5E9C600E7AA92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		481163161EA5E9C600E7AA92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		481163181EA5E9C600E7AA92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4811631B1EA5E9C600E7AA92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4811631D1EA5E9C600E7AA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481163221EA5E9C600E7AA92 /* paktorExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = paktorExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		481163261EA5E9C600E7AA92 /* paktorExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = paktorExampleTests.m; sourceTree = "<group>"; };
+		481163281EA5E9C600E7AA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4811632D1EA5E9C600E7AA92 /* paktorExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = paktorExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		481163311EA5E9C600E7AA92 /* paktorExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = paktorExampleUITests.m; sourceTree = "<group>"; };
+		481163331EA5E9C600E7AA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481163461EA5F96B00E7AA92 /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
+		481163471EA5F96B00E7AA92 /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
+		481163701EA5FD7100E7AA92 /* MainTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarController.h; sourceTree = "<group>"; };
+		481163711EA5FD7100E7AA92 /* MainTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarController.m; sourceTree = "<group>"; };
+		481163771EA60CE300E7AA92 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		481163781EA71B2E00E7AA92 /* paktorExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "paktorExample-Bridging-Header.h"; path = "MainTabbarController/paktorExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		481163FC1EA9BB8700E7AA92 /* PersonProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonProfileCell.h; sourceTree = "<group>"; };
+		481163FD1EA9BB8700E7AA92 /* PersonProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonProfileCell.m; sourceTree = "<group>"; };
+		481163FE1EA9BB8700E7AA92 /* PersonProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonProfileCell.xib; sourceTree = "<group>"; };
+		481164061EA9BB9500E7AA92 /* CollectionPushAndPoppable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPushAndPoppable.swift; sourceTree = "<group>"; };
+		481164071EA9BB9500E7AA92 /* PopInAndOutAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopInAndOutAnimator.swift; sourceTree = "<group>"; };
+		481164081EA9BB9500E7AA92 /* UIView+Screenshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Screenshot.swift"; sourceTree = "<group>"; };
+		4811640F1EA9BCA500E7AA92 /* stackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stackLayout.h; sourceTree = "<group>"; };
+		481164101EA9BCA500E7AA92 /* stackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stackLayout.m; sourceTree = "<group>"; };
+		481164121EA9BDE100E7AA92 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
+		481164131EA9BDE100E7AA92 /* HomePageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageController.xib; sourceTree = "<group>"; };
+		481164171EA9C24300E7AA92 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		4811641A1EA9DC7000E7AA92 /* ChoiceImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceImageView.swift; sourceTree = "<group>"; };
+		4811641C1EA9E90A00E7AA92 /* ProFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProFileView.swift; sourceTree = "<group>"; };
+		481164211EA9F8DA00E7AA92 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		481164221EA9F8DA00E7AA92 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		481164271EA9F8EB00E7AA92 /* InterestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestController.h; sourceTree = "<group>"; };
+		481164281EA9F8EB00E7AA92 /* InterestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestController.m; sourceTree = "<group>"; };
+		4811642B1EA9F95000E7AA92 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4811642C1EA9F95000E7AA92 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		481164301EAA0A2700E7AA92 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		485D0FB61EB74EFF006DEFAD /* StretchHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchHeader.swift; sourceTree = "<group>"; };
+		485D0FBB1EB74EFF006DEFAD /* TagViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
+		485D0FBC1EB74EFF006DEFAD /* FlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		485D0FBD1EB74EFF006DEFAD /* InformCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformCell.swift; sourceTree = "<group>"; };
+		485D0FBE1EB74EFF006DEFAD /* InformCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformCell.xib; sourceTree = "<group>"; };
+		485D0FBF1EB74EFF006DEFAD /* TagTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableCell.swift; sourceTree = "<group>"; };
+		485D0FC01EB74EFF006DEFAD /* TagTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagTableCell.xib; sourceTree = "<group>"; };
+		485D0FD21EB86B71006DEFAD /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		485D0FD31EB86B71006DEFAD /* TagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
+		5A017A953985BE0E4260592C /* Pods-paktorExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExampleTests/Pods-paktorExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE64907F1BECDE745C2F2857 /* Pods-paktorExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExampleUITests/Pods-paktorExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA158E5586E0163A4EC6E1D2 /* Pods-paktorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExample/Pods-paktorExample.release.xcconfig"; sourceTree = "<group>"; };
+		ECC6F1C1E0A83DD2BA094F6E /* Pods_paktorExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paktorExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0D124B69F4052E2649E8B44 /* Pods-paktorExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExampleUITests/Pods-paktorExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		481163061EA5E9C600E7AA92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D9E9C354801663D59A47889 /* Pods_paktorExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4811631F1EA5E9C600E7AA92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2320925ED4CABCFE782FC9BE /* Pods_paktorExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4811632A1EA5E9C600E7AA92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB847238B4A8F14E42BD33EE /* Pods_paktorExampleUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		377FE4B178E4796284A591CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F7453C4D02DC7727E8D4613 /* Pods-paktorExample.debug.xcconfig */,
+				CA158E5586E0163A4EC6E1D2 /* Pods-paktorExample.release.xcconfig */,
+				5A017A953985BE0E4260592C /* Pods-paktorExampleTests.debug.xcconfig */,
+				0EC091000C54FAD39138AB7D /* Pods-paktorExampleTests.release.xcconfig */,
+				F0D124B69F4052E2649E8B44 /* Pods-paktorExampleUITests.debug.xcconfig */,
+				AE64907F1BECDE745C2F2857 /* Pods-paktorExampleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		481163001EA5E9C600E7AA92 = {
+			isa = PBXGroup;
+			children = (
+				4811630B1EA5E9C600E7AA92 /* paktorExample */,
+				481163251EA5E9C600E7AA92 /* paktorExampleTests */,
+				481163301EA5E9C600E7AA92 /* paktorExampleUITests */,
+				4811630A1EA5E9C600E7AA92 /* Products */,
+				377FE4B178E4796284A591CA /* Pods */,
+				5FC4ABFFCF6F080C81AF8730 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4811630A1EA5E9C600E7AA92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				481163091EA5E9C600E7AA92 /* paktorExample.app */,
+				481163221EA5E9C600E7AA92 /* paktorExampleTests.xctest */,
+				4811632D1EA5E9C600E7AA92 /* paktorExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4811630B1EA5E9C600E7AA92 /* paktorExample */ = {
+			isa = PBXGroup;
+			children = (
+				481164041EA9BB9500E7AA92 /* Helper */,
+				481163661EA5FD7100E7AA92 /* MainTabbarController */,
+				4811636F1EA5FD7100E7AA92 /* RootViewController */,
+				4811630F1EA5E9C600E7AA92 /* AppDelegate.h */,
+				481163101EA5E9C600E7AA92 /* AppDelegate.m */,
+				481163151EA5E9C600E7AA92 /* Main.storyboard */,
+				481163181EA5E9C600E7AA92 /* Assets.xcassets */,
+				4811631A1EA5E9C600E7AA92 /* LaunchScreen.storyboard */,
+				4811631D1EA5E9C600E7AA92 /* Info.plist */,
+				481163461EA5F96B00E7AA92 /* UIViewController+Category.h */,
+				481163471EA5F96B00E7AA92 /* UIViewController+Category.m */,
+				4811630C1EA5E9C600E7AA92 /* Supporting Files */,
+				481163771EA60CE300E7AA92 /* PrefixHeader.pch */,
+			);
+			path = paktorExample;
+			sourceTree = "<group>";
+		};
+		4811630C1EA5E9C600E7AA92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				481163781EA71B2E00E7AA92 /* paktorExample-Bridging-Header.h */,
+				4811630D1EA5E9C600E7AA92 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		481163251EA5E9C600E7AA92 /* paktorExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				481163261EA5E9C600E7AA92 /* paktorExampleTests.m */,
+				481163281EA5E9C600E7AA92 /* Info.plist */,
+			);
+			path = paktorExampleTests;
+			sourceTree = "<group>";
+		};
+		481163301EA5E9C600E7AA92 /* paktorExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				481163311EA5E9C600E7AA92 /* paktorExampleUITests.m */,
+				481163331EA5E9C600E7AA92 /* Info.plist */,
+			);
+			path = paktorExampleUITests;
+			sourceTree = "<group>";
+		};
+		481163661EA5FD7100E7AA92 /* MainTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				4811642A1EA9F93800E7AA92 /* BaseViewController */,
+				481164201EA9F8B900E7AA92 /* ChatViewController */,
+				4811641F1EA9F89F00E7AA92 /* UserProfileController */,
+				4811641E1EA9F88300E7AA92 /* InterestController */,
+				481163F21EA9B8D100E7AA92 /* HomePageController */,
+			);
+			path = MainTabbarController;
+			sourceTree = "<group>";
+		};
+		4811636F1EA5FD7100E7AA92 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				481163701EA5FD7100E7AA92 /* MainTabbarController.h */,
+				481163711EA5FD7100E7AA92 /* MainTabbarController.m */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		481163F21EA9B8D100E7AA92 /* HomePageController */ = {
+			isa = PBXGroup;
+			children = (
+				481163F91EA9BAEA00E7AA92 /* Controller */,
+				481163F81EA9BAD700E7AA92 /* View */,
+			);
+			path = HomePageController;
+			sourceTree = "<group>";
+		};
+		481163F81EA9BAD700E7AA92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				481164191EA9DC5A00E7AA92 /* ChoiceImageView */,
+				4811640E1EA9BC7F00E7AA92 /* Layout */,
+				481163FC1EA9BB8700E7AA92 /* PersonProfileCell.h */,
+				481163FD1EA9BB8700E7AA92 /* PersonProfileCell.m */,
+				481163FE1EA9BB8700E7AA92 /* PersonProfileCell.xib */,
+				4811641C1EA9E90A00E7AA92 /* ProFileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		481163F91EA9BAEA00E7AA92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				481164121EA9BDE100E7AA92 /* HomePageController.swift */,
+				481164131EA9BDE100E7AA92 /* HomePageController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		481164041EA9BB9500E7AA92 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				481164161EA9C23000E7AA92 /* UIColor */,
+				481164051EA9BB9500E7AA92 /* TransitionAnimation */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		481164051EA9BB9500E7AA92 /* TransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				481164061EA9BB9500E7AA92 /* CollectionPushAndPoppable.swift */,
+				481164071EA9BB9500E7AA92 /* PopInAndOutAnimator.swift */,
+				481164081EA9BB9500E7AA92 /* UIView+Screenshot.swift */,
+			);
+			path = TransitionAnimation;
+			sourceTree = "<group>";
+		};
+		4811640E1EA9BC7F00E7AA92 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				4811640F1EA9BCA500E7AA92 /* stackLayout.h */,
+				481164101EA9BCA500E7AA92 /* stackLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		481164161EA9C23000E7AA92 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				481164171EA9C24300E7AA92 /* Color.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		481164191EA9DC5A00E7AA92 /* ChoiceImageView */ = {
+			isa = PBXGroup;
+			children = (
+				4811641A1EA9DC7000E7AA92 /* ChoiceImageView.swift */,
+			);
+			path = ChoiceImageView;
+			sourceTree = "<group>";
+		};
+		4811641E1EA9F88300E7AA92 /* InterestController */ = {
+			isa = PBXGroup;
+			children = (
+				481164271EA9F8EB00E7AA92 /* InterestController.h */,
+				481164281EA9F8EB00E7AA92 /* InterestController.m */,
+			);
+			path = InterestController;
+			sourceTree = "<group>";
+		};
+		4811641F1EA9F89F00E7AA92 /* UserProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				485D0FB41EB74EF1006DEFAD /* View */,
+				481164301EAA0A2700E7AA92 /* UserProfileController.swift */,
+			);
+			path = UserProfileController;
+			sourceTree = "<group>";
+		};
+		481164201EA9F8B900E7AA92 /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				481164211EA9F8DA00E7AA92 /* ChatViewController.h */,
+				481164221EA9F8DA00E7AA92 /* ChatViewController.m */,
+			);
+			path = ChatViewController;
+			sourceTree = "<group>";
+		};
+		4811642A1EA9F93800E7AA92 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4811642B1EA9F95000E7AA92 /* BaseViewController.h */,
+				4811642C1EA9F95000E7AA92 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		485D0FB41EB74EF1006DEFAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				485D0FB51EB74EFF006DEFAD /* StretchHeader */,
+				485D0FB71EB74EFF006DEFAD /* TagTableView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		485D0FB51EB74EFF006DEFAD /* StretchHeader */ = {
+			isa = PBXGroup;
+			children = (
+				485D0FB61EB74EFF006DEFAD /* StretchHeader.swift */,
+			);
+			path = StretchHeader;
+			sourceTree = "<group>";
+		};
+		485D0FB71EB74EFF006DEFAD /* TagTableView */ = {
+			isa = PBXGroup;
+			children = (
+				485D0FB81EB74EFF006DEFAD /* collcetionCell */,
+				485D0FBC1EB74EFF006DEFAD /* FlowLayout.swift */,
+				485D0FBD1EB74EFF006DEFAD /* InformCell.swift */,
+				485D0FBE1EB74EFF006DEFAD /* InformCell.xib */,
+				485D0FBF1EB74EFF006DEFAD /* TagTableCell.swift */,
+				485D0FC01EB74EFF006DEFAD /* TagTableCell.xib */,
+			);
+			path = TagTableView;
+			sourceTree = "<group>";
+		};
+		485D0FB81EB74EFF006DEFAD /* collcetionCell */ = {
+			isa = PBXGroup;
+			children = (
+				485D0FD21EB86B71006DEFAD /* TagCell.swift */,
+				485D0FD31EB86B71006DEFAD /* TagCell.xib */,
+				485D0FBB1EB74EFF006DEFAD /* TagViewCell.swift */,
+			);
+			path = collcetionCell;
+			sourceTree = "<group>";
+		};
+		5FC4ABFFCF6F080C81AF8730 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12A9B01D3DBF2CDBE92E9066 /* Pods_paktorExample.framework */,
+				ECC6F1C1E0A83DD2BA094F6E /* Pods_paktorExampleTests.framework */,
+				1EA542C360B68B2854B43C19 /* Pods_paktorExampleUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		481163081EA5E9C600E7AA92 /* paktorExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 481163361EA5E9C600E7AA92 /* Build configuration list for PBXNativeTarget "paktorExample" */;
+			buildPhases = (
+				0BFEEAEF1295EEB49D2AE46F /* [CP] Check Pods Manifest.lock */,
+				481163051EA5E9C600E7AA92 /* Sources */,
+				481163061EA5E9C600E7AA92 /* Frameworks */,
+				481163071EA5E9C600E7AA92 /* Resources */,
+				09AD691A2A14A6AB246EB52C /* [CP] Embed Pods Frameworks */,
+				943920B5EA4D52726AF251FF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = paktorExample;
+			productName = paktorExample;
+			productReference = 481163091EA5E9C600E7AA92 /* paktorExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		481163211EA5E9C600E7AA92 /* paktorExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 481163391EA5E9C600E7AA92 /* Build configuration list for PBXNativeTarget "paktorExampleTests" */;
+			buildPhases = (
+				3F38540F772E1E46CC417E30 /* [CP] Check Pods Manifest.lock */,
+				4811631E1EA5E9C600E7AA92 /* Sources */,
+				4811631F1EA5E9C600E7AA92 /* Frameworks */,
+				481163201EA5E9C600E7AA92 /* Resources */,
+				1B8931AE1B4B50CE3A05E4A4 /* [CP] Embed Pods Frameworks */,
+				67E6F107F5F085A6A6AC5677 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				481163241EA5E9C600E7AA92 /* PBXTargetDependency */,
+			);
+			name = paktorExampleTests;
+			productName = paktorExampleTests;
+			productReference = 481163221EA5E9C600E7AA92 /* paktorExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4811632C1EA5E9C600E7AA92 /* paktorExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4811633C1EA5E9C600E7AA92 /* Build configuration list for PBXNativeTarget "paktorExampleUITests" */;
+			buildPhases = (
+				349DB921DAAB79E6BC0F3654 /* [CP] Check Pods Manifest.lock */,
+				481163291EA5E9C600E7AA92 /* Sources */,
+				4811632A1EA5E9C600E7AA92 /* Frameworks */,
+				4811632B1EA5E9C600E7AA92 /* Resources */,
+				C1172E9569D2C3B594990B89 /* [CP] Embed Pods Frameworks */,
+				1D9A532FED32586D12F19B8C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4811632F1EA5E9C600E7AA92 /* PBXTargetDependency */,
+			);
+			name = paktorExampleUITests;
+			productName = paktorExampleUITests;
+			productReference = 4811632D1EA5E9C600E7AA92 /* paktorExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		481163011EA5E9C600E7AA92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "林羣珩";
+				TargetAttributes = {
+					481163081EA5E9C600E7AA92 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = R88GV64HV3;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					481163211EA5E9C600E7AA92 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 481163081EA5E9C600E7AA92;
+					};
+					4811632C1EA5E9C600E7AA92 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 481163081EA5E9C600E7AA92;
+					};
+				};
+			};
+			buildConfigurationList = 481163041EA5E9C600E7AA92 /* Build configuration list for PBXProject "paktorExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 481163001EA5E9C600E7AA92;
+			productRefGroup = 4811630A1EA5E9C600E7AA92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				481163081EA5E9C600E7AA92 /* paktorExample */,
+				481163211EA5E9C600E7AA92 /* paktorExampleTests */,
+				4811632C1EA5E9C600E7AA92 /* paktorExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		481163071EA5E9C600E7AA92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				485D0FD51EB86B71006DEFAD /* TagCell.xib in Resources */,
+				485D0FC71EB74EFF006DEFAD /* InformCell.xib in Resources */,
+				485D0FC91EB74EFF006DEFAD /* TagTableCell.xib in Resources */,
+				4811631C1EA5E9C600E7AA92 /* LaunchScreen.storyboard in Resources */,
+				481163191EA5E9C600E7AA92 /* Assets.xcassets in Resources */,
+				481164021EA9BB8700E7AA92 /* PersonProfileCell.xib in Resources */,
+				481163171EA5E9C600E7AA92 /* Main.storyboard in Resources */,
+				481164151EA9BDE100E7AA92 /* HomePageController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		481163201EA5E9C600E7AA92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4811632B1EA5E9C600E7AA92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09AD691A2A14A6AB246EB52C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paktorExample/Pods-paktorExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0BFEEAEF1295EEB49D2AE46F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1B8931AE1B4B50CE3A05E4A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paktorExampleTests/Pods-paktorExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D9A532FED32586D12F19B8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paktorExampleUITests/Pods-paktorExampleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		349DB921DAAB79E6BC0F3654 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F38540F772E1E46CC417E30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67E6F107F5F085A6A6AC5677 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paktorExampleTests/Pods-paktorExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		943920B5EA4D52726AF251FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paktorExample/Pods-paktorExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1172E9569D2C3B594990B89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paktorExampleUITests/Pods-paktorExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		481163051EA5E9C600E7AA92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				481163111EA5E9C600E7AA92 /* AppDelegate.m in Sources */,
+				481164291EA9F8EB00E7AA92 /* InterestController.m in Sources */,
+				481164141EA9BDE100E7AA92 /* HomePageController.swift in Sources */,
+				485D0FC11EB74EFF006DEFAD /* StretchHeader.swift in Sources */,
+				485D0FC41EB74EFF006DEFAD /* TagViewCell.swift in Sources */,
+				481163481EA5F96B00E7AA92 /* UIViewController+Category.m in Sources */,
+				4811640A1EA9BB9500E7AA92 /* PopInAndOutAnimator.swift in Sources */,
+				481164111EA9BCA500E7AA92 /* stackLayout.m in Sources */,
+				481164181EA9C24300E7AA92 /* Color.swift in Sources */,
+				4811642D1EA9F95000E7AA92 /* BaseViewController.m in Sources */,
+				485D0FC81EB74EFF006DEFAD /* TagTableCell.swift in Sources */,
+				481164321EAA0A2700E7AA92 /* UserProfileController.swift in Sources */,
+				4811641B1EA9DC7000E7AA92 /* ChoiceImageView.swift in Sources */,
+				4811640B1EA9BB9500E7AA92 /* UIView+Screenshot.swift in Sources */,
+				4811630E1EA5E9C600E7AA92 /* main.m in Sources */,
+				481163761EA5FD7100E7AA92 /* MainTabbarController.m in Sources */,
+				485D0FD41EB86B71006DEFAD /* TagCell.swift in Sources */,
+				4811641D1EA9E90A00E7AA92 /* ProFileView.swift in Sources */,
+				485D0FC61EB74EFF006DEFAD /* InformCell.swift in Sources */,
+				485D0FC51EB74EFF006DEFAD /* FlowLayout.swift in Sources */,
+				481164091EA9BB9500E7AA92 /* CollectionPushAndPoppable.swift in Sources */,
+				481164231EA9F8DA00E7AA92 /* ChatViewController.m in Sources */,
+				481164011EA9BB8700E7AA92 /* PersonProfileCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4811631E1EA5E9C600E7AA92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				481163271EA5E9C600E7AA92 /* paktorExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		481163291EA5E9C600E7AA92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				481163321EA5E9C600E7AA92 /* paktorExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		481163241EA5E9C600E7AA92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 481163081EA5E9C600E7AA92 /* paktorExample */;
+			targetProxy = 481163231EA5E9C600E7AA92 /* PBXContainerItemProxy */;
+		};
+		4811632F1EA5E9C600E7AA92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 481163081EA5E9C600E7AA92 /* paktorExample */;
+			targetProxy = 4811632E1EA5E9C600E7AA92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		481163151EA5E9C600E7AA92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				481163161EA5E9C600E7AA92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4811631A1EA5E9C600E7AA92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4811631B1EA5E9C600E7AA92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		481163341EA5E9C600E7AA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		481163351EA5E9C600E7AA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		481163371EA5E9C600E7AA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F7453C4D02DC7727E8D4613 /* Pods-paktorExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = R88GV64HV3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = paktorExample/PrefixHeader.pch;
+				INFOPLIST_FILE = paktorExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamba.paktorExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "paktorExample/MainTabbarController/paktorExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		481163381EA5E9C600E7AA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA158E5586E0163A4EC6E1D2 /* Pods-paktorExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = R88GV64HV3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = paktorExample/PrefixHeader.pch;
+				INFOPLIST_FILE = paktorExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamba.paktorExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "paktorExample/MainTabbarController/paktorExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4811633A1EA5E9C600E7AA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A017A953985BE0E4260592C /* Pods-paktorExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = paktorExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamba.paktorExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/paktorExample.app/paktorExample";
+			};
+			name = Debug;
+		};
+		4811633B1EA5E9C600E7AA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC091000C54FAD39138AB7D /* Pods-paktorExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = paktorExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamba.paktorExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/paktorExample.app/paktorExample";
+			};
+			name = Release;
+		};
+		4811633D1EA5E9C600E7AA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0D124B69F4052E2649E8B44 /* Pods-paktorExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = paktorExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamba.paktorExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = paktorExample;
+			};
+			name = Debug;
+		};
+		4811633E1EA5E9C600E7AA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE64907F1BECDE745C2F2857 /* Pods-paktorExampleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = paktorExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jamba.paktorExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = paktorExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		481163041EA5E9C600E7AA92 /* Build configuration list for PBXProject "paktorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				481163341EA5E9C600E7AA92 /* Debug */,
+				481163351EA5E9C600E7AA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		481163361EA5E9C600E7AA92 /* Build configuration list for PBXNativeTarget "paktorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				481163371EA5E9C600E7AA92 /* Debug */,
+				481163381EA5E9C600E7AA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		481163391EA5E9C600E7AA92 /* Build configuration list for PBXNativeTarget "paktorExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4811633A1EA5E9C600E7AA92 /* Debug */,
+				4811633B1EA5E9C600E7AA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4811633C1EA5E9C600E7AA92 /* Build configuration list for PBXNativeTarget "paktorExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4811633D1EA5E9C600E7AA92 /* Debug */,
+				4811633E1EA5E9C600E7AA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 481163011EA5E9C600E7AA92 /* Project object */;
+}
