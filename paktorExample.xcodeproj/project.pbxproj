@@ -41,6 +41,7 @@
 		485D0FC91EB74EFF006DEFAD /* TagTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485D0FC01EB74EFF006DEFAD /* TagTableCell.xib */; };
 		485D0FD41EB86B71006DEFAD /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FD21EB86B71006DEFAD /* TagCell.swift */; };
 		485D0FD51EB86B71006DEFAD /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485D0FD31EB86B71006DEFAD /* TagCell.xib */; };
+		4864275A1EBAD18C00D18003 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486427591EBAD18C00D18003 /* NavigationBarView.swift */; };
 		7D9E9C354801663D59A47889 /* Pods_paktorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A9B01D3DBF2CDBE92E9066 /* Pods_paktorExample.framework */; };
 		CB847238B4A8F14E42BD33EE /* Pods_paktorExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA542C360B68B2854B43C19 /* Pods_paktorExampleUITests.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		485D0FC01EB74EFF006DEFAD /* TagTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagTableCell.xib; sourceTree = "<group>"; };
 		485D0FD21EB86B71006DEFAD /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		485D0FD31EB86B71006DEFAD /* TagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
+		486427591EBAD18C00D18003 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		5A017A953985BE0E4260592C /* Pods-paktorExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExampleTests/Pods-paktorExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE64907F1BECDE745C2F2857 /* Pods-paktorExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExampleUITests/Pods-paktorExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CA158E5586E0163A4EC6E1D2 /* Pods-paktorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExample/Pods-paktorExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 		485D0FB41EB74EF1006DEFAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				486427581EBAD16E00D18003 /* NavigationBarView */,
 				485D0FB51EB74EFF006DEFAD /* StretchHeader */,
 				485D0FB71EB74EFF006DEFAD /* TagTableView */,
 			);
@@ -403,6 +406,14 @@
 				485D0FBB1EB74EFF006DEFAD /* TagViewCell.swift */,
 			);
 			path = collcetionCell;
+			sourceTree = "<group>";
+		};
+		486427581EBAD16E00D18003 /* NavigationBarView */ = {
+			isa = PBXGroup;
+			children = (
+				486427591EBAD18C00D18003 /* NavigationBarView.swift */,
+			);
+			path = NavigationBarView;
 			sourceTree = "<group>";
 		};
 		5FC4ABFFCF6F080C81AF8730 /* Frameworks */ = {
@@ -704,6 +715,7 @@
 			files = (
 				481163111EA5E9C600E7AA92 /* AppDelegate.m in Sources */,
 				481164291EA9F8EB00E7AA92 /* InterestController.m in Sources */,
+				4864275A1EBAD18C00D18003 /* NavigationBarView.swift in Sources */,
 				481164141EA9BDE100E7AA92 /* HomePageController.swift in Sources */,
 				485D0FC11EB74EFF006DEFAD /* StretchHeader.swift in Sources */,
 				485D0FC41EB74EFF006DEFAD /* TagViewCell.swift in Sources */,

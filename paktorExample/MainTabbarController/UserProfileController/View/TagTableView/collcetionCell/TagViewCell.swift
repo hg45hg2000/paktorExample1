@@ -15,7 +15,7 @@ enum CollectionCellType{
     case defaultType
 }
 
-struct Tag {
+class Tag {
     
     var name: String?
     var selected = false
@@ -25,6 +25,7 @@ struct Tag {
         self.selected = selected
     }
 }
+
 
 class TagViewCell: UICollectionViewCell {
     
@@ -43,6 +44,7 @@ class TagViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    var collectionCellType :CollectionCellType = .defaultType
     
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -61,6 +63,7 @@ class TagViewCell: UICollectionViewCell {
         addSubview(label)
         addSubview(imageView)
     }
+    
     private func layout(){
         label.snp.makeConstraints { (make) in
             make.center.equalTo(self)
@@ -74,9 +77,10 @@ class TagViewCell: UICollectionViewCell {
         }
     }
     
-    func configureCell(_ cellData: CollectionCellType, indexPath:NSIndexPath) {
+    func configureCell(_ cellData: CollectionCellType, indexPath:IndexPath) {
         self.label.isHidden = true
         self.imageView.isHidden = true
+        self.collectionCellType  = cellData
         switch cellData {
         case .tag(let tageArray):
             let tageData = tageArray[indexPath.row]
@@ -84,6 +88,7 @@ class TagViewCell: UICollectionViewCell {
             self.label.text = tageData.name ?? ""
             self.label.textColor = tageData.selected ? UIColor.white : UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
             self.backgroundColor = tageData.selected ? UIColor(red: 0, green: 1, blue: 0, alpha: 1) : UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+            break
         case .image(let imageArray):
             let imageData = imageArray[indexPath.row]
             self.imageView.isHidden = false
@@ -93,6 +98,14 @@ class TagViewCell: UICollectionViewCell {
             break
         }
         
+    }
+    open func selectedEvent(slectedIndexPath:IndexPath){
+        switch self.collectionCellType {
+        case .tag(let tageArray):
+            self.label.textColor = tageArray[slectedIndexPath.row].selected ? UIColor.white : UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+            self.backgroundColor = tageArray[slectedIndexPath.row].selected ? UIColor(red: 0, green: 1, blue: 0, alpha: 1) : UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+        default:break
+        }
     }
     
     

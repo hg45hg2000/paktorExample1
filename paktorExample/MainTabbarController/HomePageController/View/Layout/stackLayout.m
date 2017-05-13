@@ -20,6 +20,7 @@
     [super prepareLayout];
     self.totalcellcount = [self.collectionView numberOfItemsInSection:0];
     
+    
     self.attributes = [NSMutableArray arrayWithCapacity:self.totalcellcount];
     
     self.center = CGPointMake((double)self.collectionView.bounds.size.width * 0.5, (double)self.collectionView.bounds.size.height * 0.5);

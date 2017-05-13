@@ -9,7 +9,9 @@
 #import "ChatViewController.h"
 #import "UIScrollView+SVPullToRefresh.h"
 
-@interface ChatViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchResultsUpdating,UISearchControllerDelegate>
+static CGFloat const ChatCellHeight = 50;
+
+@interface ChatViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic, strong)UISearchController *searchController;
@@ -43,17 +45,11 @@
 }
 
 - (void)setupSearchController{
-//    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-//    // 將更新搜尋結果的對象設為 self
-//    self.searchController.searchResultsUpdater = self;
-////    self.searchController.delegate = self;
-//    // 搜尋時是否隱藏 NavigationBar
-//    self.searchController.hidesNavigationBarDuringPresentation = false;
+
     UISearchBar *searchbar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
-    // 搜尋時是否使用燈箱效果 (會將畫面變暗以集中搜尋焦點)
-    self.searchController.dimsBackgroundDuringPresentation = false;
     searchbar.searchBarStyle = UISearchBarStyleMinimal;
     [searchbar setPlaceholder:@"Search your Matches"];
+    searchbar.delegate = self;
     self.tableView.tableHeaderView = searchbar;
 }
 
@@ -71,19 +67,12 @@
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 50;
+    return ChatCellHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     return cell;
-}
-#pragma mark 
-- (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
-    
-}
-- (void)didPresentSearchController:(UISearchController *)searchController{
-    [self.searchController.searchBar setShowsCancelButton:NO];
 }
 
 @end

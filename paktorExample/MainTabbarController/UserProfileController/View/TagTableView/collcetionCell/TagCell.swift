@@ -22,7 +22,7 @@ class TagCell: UICollectionViewCell {
         self.tagNameMaxWidthConstraint.constant = UIScreen.main.bounds.width - 8 * 2 - 8 * 2
     }
     
-    func configureCell(_ cellData: CollectionCellType , indexPath:NSIndexPath) {
+    func configureCell(_ cellData: CollectionCellType , indexPath:IndexPath) {
         switch cellData {
         case .tag(let tagArray):
             let tag = tagArray[indexPath.row]

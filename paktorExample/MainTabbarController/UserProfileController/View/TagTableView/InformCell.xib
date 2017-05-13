@@ -21,22 +21,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYo-hQ-ige">
-                        <rect key="frame" x="-8" y="-8" width="336" height="70.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOI-6o-1cv">
-                                <rect key="frame" x="8" y="25" width="42" height="21"/>
+                                <rect key="frame" x="8" y="17" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IF8-YQ-DbG">
-                                <rect key="frame" x="275" y="25" width="42" height="21"/>
+                                <rect key="frame" x="259" y="17" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wyl-ae-cGi">
-                                <rect key="frame" x="32" y="4" width="272" height="50"/>
+                                <rect key="frame" x="30" y="3" width="260" height="39"/>
                                 <color key="tintColor" red="0.67072700459452272" green="1" blue="0.57208360241598433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
                         </subviews>
@@ -55,10 +55,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="EYo-hQ-ige" secondAttribute="bottom" constant="-8" id="5j0-Pd-b8s"/>
-                    <constraint firstItem="EYo-hQ-ige" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-8" id="6q3-6N-z3U"/>
-                    <constraint firstAttribute="trailing" secondItem="EYo-hQ-ige" secondAttribute="trailing" constant="-8" id="RbT-vt-EY6"/>
-                    <constraint firstItem="EYo-hQ-ige" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-8" id="zUB-Wf-D07"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="EYo-hQ-ige" secondAttribute="bottom" id="5j0-Pd-b8s"/>
+                    <constraint firstItem="EYo-hQ-ige" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6q3-6N-z3U"/>
+                    <constraint firstAttribute="trailing" secondItem="EYo-hQ-ige" secondAttribute="trailing" id="RbT-vt-EY6"/>
+                    <constraint firstItem="EYo-hQ-ige" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zUB-Wf-D07"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

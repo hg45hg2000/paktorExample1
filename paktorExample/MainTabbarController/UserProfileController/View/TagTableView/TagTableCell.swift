@@ -13,9 +13,12 @@ enum tabelCellType{
     case collectioView(CollectionCellType)
     case tableview(InformCelltype)
     
+    var  normalCellHeight : CGFloat {
+        return 44
+    }
     
     var collectionCellHeight :CGFloat {
-        var contenlengt : CGFloat = 0
+        var contenlengt : CGFloat = normalCellHeight
         let labelSize  = 17
         switch self {
         case .collectioView(let cellType):
@@ -24,7 +27,7 @@ enum tabelCellType{
                 for tag in tagArray {
                   contenlengt += CGFloat ((tag.name?.characters.count)! * labelSize)
                 }
-                return contenlengt/screenWidth * 45
+                return max((contenlengt/screenWidth * normalCellHeight * 1.5), normalCellHeight)
             case .image(_):
                 return 100
             default:break
@@ -36,12 +39,12 @@ enum tabelCellType{
         return contenlengt
     }
     var tableviewCellHeight :CGFloat {
-        var contentlengt : CGFloat = 44
+        var contentlengt : CGFloat = normalCellHeight
         switch self {
         case .tableview(let tableCelltype):
             switch tableCelltype {
             case .text(let textArray):
-             contentlengt = contentlengt * CGFloat((textArray.count))
+             contentlengt = normalCellHeight * CGFloat((textArray.count))
             default:break
             }
         default:break
@@ -51,6 +54,10 @@ enum tabelCellType{
         return contentlengt
     }
 }
+protocol TagTableCellDelegate : class {
+    func TageTableSelectIndexPath(indexPath:IndexPath)
+}
+
 
 class TagTableCell: UITableViewCell {
     
@@ -69,6 +76,10 @@ class TagTableCell: UITableViewCell {
     var collectionCellTypes  = CollectionCellType.defaultType
 
     var informCellDate  =  InformCelltype.defaultType
+    
+    weak var delegate : TagTableCellDelegate? = nil
+    
+    var sectionIndex : Int = 0
     
     open func configureCellData(CellType:tabelCellType){
             switch CellType {
@@ -101,7 +112,8 @@ class TagTableCell: UITableViewCell {
             collectionView.delegate = self
             collectionView.dataSource = self
             collectionView.isHidden = false;
-            //
+            tableView.isHidden = true
+        
             let cellNib = UINib(nibName: "TagCell", bundle: nil)
             self.collectionView.register(cellNib, forCellWithReuseIdentifier: "TagCell")
             self.collectionView.backgroundColor = UIColor.clear
@@ -111,7 +123,7 @@ class TagTableCell: UITableViewCell {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "InformCell", bundle: nil), forCellReuseIdentifier: InformCell.informcellid)
-        
+        collectionView.isHidden = true
     }
 }
 extension TagTableCell:UITableViewDelegate,UITableViewDataSource{
@@ -129,9 +141,16 @@ extension TagTableCell:UITableViewDelegate,UITableViewDataSource{
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: InformCell.informcellid)as!InformCell
-         cell.changecellType(InformCelltype: self.informCellDate, indexPath:indexPath as NSIndexPath)
+         cell.changecellType(InformCelltype: self.informCellDate, indexPath:indexPath )
          return cell
     }
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.delegate?.TageTableSelectIndexPath(indexPath: IndexPath(row: indexPath.row, section: self.sectionIndex))
+        
+        if let cell = tableView.cellForRow(at: indexPath) as? InformCell{
+        }
+    }
+    
 }
 
 extension TagTableCell: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -147,10 +166,17 @@ extension TagTableCell: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         }
         
     }
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        self.delegate?.TageTableSelectIndexPath(indexPath: IndexPath(row: indexPath.row, section: self.sectionIndex))
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? TagViewCell {
+            cell.selectedEvent(slectedIndexPath:indexPath)
+        }
+    }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagViewCell.tagViewCellID, for: indexPath) as! TagViewCell
-        cell.configureCell(collectionCellTypes, indexPath:indexPath as NSIndexPath)
+        cell.configureCell(collectionCellTypes, indexPath:indexPath )
         
         return cell
     }
@@ -159,7 +185,7 @@ extension TagTableCell: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         
         switch collectionCellTypes {
         case .tag(_):
-            self.sizingCell!.configureCell(collectionCellTypes , indexPath: indexPath as NSIndexPath)
+            self.sizingCell!.configureCell(collectionCellTypes , indexPath: indexPath )
             return self.sizingCell!.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
         case .image(_):
             return CGSize(width: collectionView.frame.size.width/4, height: collectionView.frame.size.height)

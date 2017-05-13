@@ -107,8 +107,8 @@ CGFloat moveDetectConstants = 150;
 }
 
 - (void)listenSwipeDirection:(SwipeDirection)direction{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(PersonEndChoiceProfileCell:SwipeDirection:)]) {
-        [self.delegate PersonEndChoiceProfileCell:self SwipeDirection:direction];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(PersonEndChoiceProfileCellAtIndexPath:SwipeDirection:)]) {
+        [self.delegate PersonEndChoiceProfileCellAtIndexPath:self.indexPath SwipeDirection:direction];
     }
 }
 

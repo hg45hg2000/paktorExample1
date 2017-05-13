@@ -14,25 +14,16 @@ let screenHeight = UIScreen.main.bounds.height
 
 class UserProfileController: BaseViewController {
 
-     var dataTypes :Array<tabelCellType> = [tabelCellType.collectioView(CollectionCellType.tag([Tag(name: "", selected: true),Tag(name: "", selected: true),Tag(name: "", selected: true),Tag(name: "", selected: true),Tag(name: "", selected: true)])),
-                                            
-                                            tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
-                                                                         
-                                           tabelCellType.tableview(InformCelltype.text([TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank")])),
-                                                                  
-                                           tabelCellType.tableview(InformCelltype.silder([SilderData(value:1)]))
-
-    
-    ]
+    var dataTypes :Array<tabelCellType>!
     
     var header : StretchHeader!
     
     var tableView : UITableView!
     
-    var navigationView = UIView()
+    var navigationView = NavigationBarView()
 
     var collectionViewHeight :CGFloat = 0
-    
+     var SilderDatas = SilderData(value:1)
        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,6 +33,24 @@ class UserProfileController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dataTypes  = [
+            tabelCellType.collectioView(CollectionCellType.tag(
+                [Tag(name: "sdfsdfsd", selected: false),Tag(name: "sdfsdfs", selected: false),
+                 Tag(name: "sdfsdf", selected: false),Tag(name: "sdfsdf", selected: false),Tag(name: "sdfsdfs", selected: false)])),
+        
+        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+        
+        tabelCellType.tableview(InformCelltype.text([TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank")])),
+        
+        tabelCellType.tableview(InformCelltype.silder([SilderDatas])),
+        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!]))
+        ]
+        
         setupTableView()
         setupHeaderView()
         navigatBarItem()
@@ -49,37 +58,22 @@ class UserProfileController: BaseViewController {
     
     
     private func setupTableView(){
-        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - 47), style: .plain)
         
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - 47), style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
         view.addSubview(tableView)
-        
         tableView.register(UINib.init(nibName: "TagTableCell", bundle: nil), forCellReuseIdentifier:TagTableCell.TagTableCellID)
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 300
-        
     }
     
     private func navigatBarItem(){
-        // NavigationHeader
+
         let navibarHeight : CGFloat = navigationController!.navigationBar.bounds.height
         let statusbarHeight : CGFloat = UIApplication.shared.statusBarFrame.size.height
-        navigationView = UIView()
-        navigationView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: navibarHeight + statusbarHeight)
-        navigationView.backgroundColor = UIColor(red: 121/255.0, green: 193/255.0, blue: 203/255.0, alpha: 1.0)
-        navigationView.alpha = 0.0
+        navigationView = NavigationBarView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: navibarHeight + statusbarHeight))
         view.addSubview(navigationView)
-        
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 10, y: 20, width: 44, height: 44)
-        button.setImage(UIImage(named: "navi_back_btn")?.withRenderingMode(.alwaysTemplate), for: UIControlState())
-        button.tintColor = UIColor.white
-        button.addTarget(self, action: #selector(UserProfileController.leftButtonAction), for: .touchUpInside)
-        view.addSubview(button)
     }
-    
     
     func setupHeaderView() {
         
@@ -118,27 +112,50 @@ extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
             navigationView.alpha = 0.0;
         }
     }
-    
+    public func numberOfSections(in tableView: UITableView) -> Int{
+         return dataTypes.count
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dataTypes.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let tagcell = tableView.dequeueReusableCell(withIdentifier: TagTableCell.TagTableCellID, for: indexPath) as! TagTableCell
-                tagcell.configureCellData(CellType: dataTypes[indexPath.row])
+                tagcell.configureCellData(CellType: dataTypes[indexPath.section])
+                tagcell.delegate = self
+                tagcell.sectionIndex = indexPath.section
             return tagcell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        switch dataTypes[indexPath.row] {
+        switch dataTypes[indexPath.section] {
         case .collectioView( _):
-             return dataTypes[indexPath.row].collectionCellHeight
+             return dataTypes[indexPath.section].collectionCellHeight
         case .tableview(_):
-            return dataTypes[indexPath.row].tableviewCellHeight
+            return dataTypes[indexPath.section].tableviewCellHeight
         }
+    }
+}
+extension UserProfileController:TagTableCellDelegate{
+    
+    func TageTableSelectIndexPath(indexPath:IndexPath){
+        switch dataTypes[indexPath.section] {
+        case .collectioView(let collectioncellType):
+            switch collectioncellType {
+            case .tag(var tagArray):
+                print(" slected \(tagArray[indexPath.row].selected)")
+                tagArray[indexPath.row].selected = !tagArray[indexPath.row].selected
+                print(" slected \(tagArray[indexPath.row].selected)")
+            default:break
+            }
+            break
+        case .tableview( _):
+            break
+        }
+        print("selected data type \(dataTypes[indexPath.section])")
     }
 }
 

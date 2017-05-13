@@ -31,9 +31,9 @@ class HomePageController: BaseViewController,CollectionPushAndPoppable{
         
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
 }
 extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource,PersonProfileCellDelegate {
     
@@ -45,22 +45,22 @@ extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier:PersonProfileCellID , for: indexPath) as! PersonProfileCell
         cell.backgroundColor = .random()
-        cell.delegate = self as PersonProfileCellDelegate;
+        cell.delegate = self as PersonProfileCellDelegate
+        cell.indexPath = indexPath
         return cell
     }
     
-    public func personEndChoiceProfileCell(_ cell: PersonProfileCell!, swipeDirection Direction: SwipeDirection) {
+    public func personEndChoiceProfileCell(at IndexPath: IndexPath!, swipeDirection Direction: SwipeDirection){
     
-        if let deleteIndexPath =  collectionView?.indexPath(for: cell){
+
             switch Direction {
             case .Left:
-                self .deleteDataAtIndex(index: deleteIndexPath)
+                self .deleteDataAtIndex(index: IndexPath)
             case .Right:
-                self .deleteDataAtIndex(index: deleteIndexPath)
+                self .deleteDataAtIndex(index: IndexPath)
             default:break
             }
-            
-        }
+        
         checkImageView.changeType(ImageViewType: .Blank)
     }
     
@@ -77,9 +77,20 @@ extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     private func deleteDataAtIndex(index:IndexPath){
-        personalArray .remove(at: index.row);
+        print("delete index \(index.row)")
+        personalArray.remove(at: index.row);
         collectionView?.deleteItems(at: [index])
+        addData()
     }
+    private func addData(){
+           self.collectionView?.performBatchUpdates({
+            self.personalArray.insert("", at: 0)
+            self.collectionView?.insertItems(at: [IndexPath(row: 0, section: 0)])
+           }, completion: { (finsin) in
+        
+       })
+    }
+    
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
 //        let selectedCell = collectionView.cellForItem(at: indexPath)
 //        sourceCell = selectedCell

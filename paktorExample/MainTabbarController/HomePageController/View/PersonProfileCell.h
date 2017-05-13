@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger,SwipeDirection){
 };
 @protocol PersonProfileCellDelegate <NSObject>
 @optional
-- (void)PersonEndChoiceProfileCell:(PersonProfileCell*)cell SwipeDirection:(SwipeDirection)Direction;
+- (void)PersonEndChoiceProfileCellAtIndexPath:(NSIndexPath*)IndexPath SwipeDirection:(SwipeDirection)Direction;
 
 - (void)PersonProfileCellMovePositionX:(CGFloat)movement MovePositionY:(CGFloat)positionY;
 
@@ -30,5 +30,6 @@ typedef NS_ENUM(NSInteger,SwipeDirection){
 
 
 @property (weak,nonatomic)id <PersonProfileCellDelegate> delegate;
+@property (nonatomic)NSIndexPath *indexPath;
 @end
 
