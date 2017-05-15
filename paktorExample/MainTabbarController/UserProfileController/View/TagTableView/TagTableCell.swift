@@ -12,47 +12,6 @@ import UIKit
 enum tabelCellType{
     case collectioView(CollectionCellType)
     case tableview(InformCelltype)
-    
-    var  normalCellHeight : CGFloat {
-        return 44
-    }
-    
-    var collectionCellHeight :CGFloat {
-        var contenlengt : CGFloat = normalCellHeight
-        let labelSize  = 17
-        switch self {
-        case .collectioView(let cellType):
-            switch cellType {
-            case .tag(let tagArray):
-                for tag in tagArray {
-                  contenlengt += CGFloat ((tag.name?.characters.count)! * labelSize)
-                }
-                return max((contenlengt/screenWidth * normalCellHeight * 1.5), normalCellHeight)
-            case .image(_):
-                return 100
-            default:break
-            }
-            
-        default:break
-            
-        }
-        return contenlengt
-    }
-    var tableviewCellHeight :CGFloat {
-        var contentlengt : CGFloat = normalCellHeight
-        switch self {
-        case .tableview(let tableCelltype):
-            switch tableCelltype {
-            case .text(let textArray):
-             contentlengt = normalCellHeight * CGFloat((textArray.count))
-            default:break
-            }
-        default:break
-        }
-        
-        
-        return contentlengt
-    }
 }
 protocol TagTableCellDelegate : class {
     func TageTableSelectIndexPath(indexPath:IndexPath)
@@ -82,6 +41,7 @@ class TagTableCell: UITableViewCell {
     var sectionIndex : Int = 0
     
     open func configureCellData(CellType:tabelCellType){
+        
             switch CellType {
             case .collectioView(let tagArray):
                 setCollectionView()
@@ -92,7 +52,7 @@ class TagTableCell: UITableViewCell {
                     self.collectionView.setCollectionViewLayout(TagFlowLayout(), animated: false)
                 default: break
                 }
-                
+
                 DispatchQueue.main.async {
                     self.collectionCellTypes = tagArray
                     self.collectionView.reloadData()
@@ -104,7 +64,6 @@ class TagTableCell: UITableViewCell {
                     self.tableView.reloadData()
                 }
             }
-        
     }
 
     private func setCollectionView(){
@@ -147,8 +106,6 @@ extension TagTableCell:UITableViewDelegate,UITableViewDataSource{
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.TageTableSelectIndexPath(indexPath: IndexPath(row: indexPath.row, section: self.sectionIndex))
         
-        if let cell = tableView.cellForRow(at: indexPath) as? InformCell{
-        }
     }
     
 }
@@ -185,8 +142,8 @@ extension TagTableCell: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         
         switch collectionCellTypes {
         case .tag(_):
-            self.sizingCell!.configureCell(collectionCellTypes , indexPath: indexPath )
-            return self.sizingCell!.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+            self.sizingCell?.configureCell(collectionCellTypes, indexPath: indexPath)
+            return (self.sizingCell?.systemLayoutSizeFitting(UILayoutFittingCompressedSize))!
         case .image(_):
             return CGSize(width: collectionView.frame.size.width/4, height: collectionView.frame.size.height)
         default:

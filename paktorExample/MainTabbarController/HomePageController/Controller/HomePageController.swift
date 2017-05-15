@@ -30,10 +30,6 @@ class HomePageController: BaseViewController,CollectionPushAndPoppable{
         self.navigationController?.delegate = self
         
     }
-    
-//    override var prefersStatusBarHidden: Bool {
-//        return true
-//    }
 }
 extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource,PersonProfileCellDelegate {
     
@@ -78,9 +74,15 @@ extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource
     
     private func deleteDataAtIndex(index:IndexPath){
         print("delete index \(index.row)")
-        personalArray.remove(at: index.row);
-        collectionView?.deleteItems(at: [index])
-        addData()
+        personalArray.remove(at: index.row)
+        self.collectionView?.deleteItems(at: [IndexPath(row: index.row, section: 0)])
+        self.collectionView?.performBatchUpdates({ 
+            
+        }, completion: { (finsh) in
+            if finsh {
+                self.addData()
+            }
+        })
     }
     private func addData(){
            self.collectionView?.performBatchUpdates({

@@ -112,9 +112,10 @@ open class StretchHeader: UIView {
         var scrollOffset : CGFloat = scrollView.contentOffset.y
         scrollOffset += topInset
         
+        //  minus negative number become positive  
         if scrollOffset < 0 {
             imageView.frame = CGRect(x: scrollOffset ,y: scrollOffset, width: contentSize.width - (scrollOffset * 2) , height: contentSize.height - scrollOffset);
-             buttonView.frame = CGRect(x: 0 , y: contentSize.height - buttonViewHeight + scrollOffset, width: contentSize.width, height: buttonViewHeight)
+            buttonView.frame = CGRect(x: 0 , y: contentSize.height - buttonViewHeight + scrollOffset, width: contentSize.width, height: buttonViewHeight)
         } else {
             imageView.frame = CGRect(x: 0, y: 0, width: contentSize.width, height: contentSize.height);
             buttonView.frame = CGRect(x: 0 , y: contentSize.height - buttonViewHeight, width: contentSize.width, height: buttonViewHeight)

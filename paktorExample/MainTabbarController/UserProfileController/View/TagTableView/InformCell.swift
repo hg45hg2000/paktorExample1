@@ -12,6 +12,21 @@ enum InformCelltype{
     case text(Array<TextData>)
     case silder(Array<SilderData>)
     case defaultType
+    
+    var  normalCellHeight : CGFloat {
+        return 44
+    }
+    var tableviewCellHeight :CGFloat {
+        var contentlengt : CGFloat = normalCellHeight
+            switch self {
+            case .text(let textArray):
+                contentlengt = normalCellHeight * CGFloat((textArray.count))
+            default:break
+            }
+
+        return contentlengt
+    }
+
 }
 
 struct TextData {

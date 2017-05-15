@@ -7,6 +7,8 @@
 //
 
 #import "stackLayout.h"
+CGFloat cardSpacing = 20;
+
 @interface stackLayout()
 @property (nonatomic,strong)NSMutableArray <UICollectionViewLayoutAttributes*> *attributes;
 @property (nonatomic,assign)CGPoint center;
@@ -54,8 +56,8 @@
 
 - (UICollectionViewLayoutAttributes *)calculatelayoutindexPath:(NSIndexPath *)indexPath{
     UICollectionViewLayoutAttributes *Attribute = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    Attribute.size = CGSizeMake(self.collectionView.bounds.size.width + (indexPath.row * 20), self.collectionView.bounds.size.height);
-    Attribute.center = CGPointMake(self.collectionView.bounds.size.width/2 , self.collectionView.bounds.size.height/2+(indexPath.row *20));
+    Attribute.size = CGSizeMake(self.collectionView.bounds.size.width + (indexPath.row * cardSpacing), self.collectionView.bounds.size.height);
+    Attribute.center = CGPointMake(self.collectionView.bounds.size.width/2 , self.collectionView.bounds.size.height/2+(indexPath.row *cardSpacing));
     return Attribute;
 }
 

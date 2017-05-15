@@ -22,8 +22,7 @@ class UserProfileController: BaseViewController {
     
     var navigationView = NavigationBarView()
 
-    var collectionViewHeight :CGFloat = 0
-     var SilderDatas = SilderData(value:1)
+    var collectionViewHeight : CGFloat = 0
        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,12 +37,9 @@ class UserProfileController: BaseViewController {
             tabelCellType.collectioView(CollectionCellType.tag(
                 [Tag(name: "sdfsdfsd", selected: false),Tag(name: "sdfsdfs", selected: false),
                  Tag(name: "sdfsdf", selected: false),Tag(name: "sdfsdf", selected: false),Tag(name: "sdfsdfs", selected: false)])),
-        
         tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
-        
         tabelCellType.tableview(InformCelltype.text([TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank")])),
-        
-        tabelCellType.tableview(InformCelltype.silder([SilderDatas])),
+        tabelCellType.tableview(InformCelltype.silder([SilderData(value:1)])),
         tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
         tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
         tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
@@ -106,7 +102,7 @@ extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
         // NavigationHeader alpha update
         let offset : CGFloat = scrollView.contentOffset.y
         if (offset > 50) {
-            let alpha : CGFloat = min(CGFloat(1), CGFloat(1) - (CGFloat(50) + (navigationView.frame.height) - offset) / (navigationView.frame.height))
+            let alpha  = offset / 100;
             navigationView.alpha = CGFloat(alpha)
         } else {
             navigationView.alpha = 0.0;
@@ -122,26 +118,27 @@ extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let tagcell = tableView.dequeueReusableCell(withIdentifier: TagTableCell.TagTableCellID, for: indexPath) as! TagTableCell
-                tagcell.configureCellData(CellType: dataTypes[indexPath.section])
-                tagcell.delegate = self
-                tagcell.sectionIndex = indexPath.section
-            return tagcell
+        let tagcell = tableView.dequeueReusableCell(withIdentifier: TagTableCell.TagTableCellID, for: indexPath) as! TagTableCell
+            tagcell.configureCellData(CellType: dataTypes[indexPath.section])
+            tagcell.delegate = self
+            tagcell.sectionIndex = indexPath.section
+        return tagcell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch dataTypes[indexPath.section] {
-        case .collectioView( _):
-             return dataTypes[indexPath.section].collectionCellHeight
-        case .tableview(_):
-            return dataTypes[indexPath.section].tableviewCellHeight
+        case .collectioView( let collectiontype):
+             return collectiontype.collectionCellHeight
+        case .tableview(let tableViewType):
+            return tableViewType.tableviewCellHeight
         }
     }
 }
 extension UserProfileController:TagTableCellDelegate{
     
     func TageTableSelectIndexPath(indexPath:IndexPath){
+        
         switch dataTypes[indexPath.section] {
         case .collectioView(let collectioncellType):
             switch collectioncellType {

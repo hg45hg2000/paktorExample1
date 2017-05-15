@@ -13,12 +13,43 @@ enum CollectionCellType{
     case tag(Array<Tag>)
     case image(Array<UIImage>)
     case defaultType
+    var  normalCellHeight : CGFloat {
+        return 44
+    }
+    
+    var collectionCellHeight :CGFloat {
+        get{
+        var contenlengt : CGFloat = normalCellHeight
+                switch self {
+                case .tag(let tagArray):
+                    for tag in tagArray {
+                        contenlengt += CGFloat((tag.name?.characters.count)!) * tag.tagFontSize + 20
+                    }
+                    return max((contenlengt/screenWidth * normalCellHeight), normalCellHeight)
+                case .image(_):
+                    return 100
+                default:break
+                }
+            
+            return contenlengt
+        }
+    }
 }
 
 class Tag {
     
     var name: String?
     var selected = false
+    var tagFontSize : CGFloat{
+        return 20
+    }
+    var stringRealwidth : CGFloat{
+        return tagFontSize / 1.8
+    }
+    
+    var tagWidth : CGFloat {
+       return  CGFloat((self.name?.characters.count)!) * stringRealwidth
+    }
     
     init(name:String,selected:Bool) {
         self.name = name
@@ -86,6 +117,7 @@ class TagViewCell: UICollectionViewCell {
             let tageData = tageArray[indexPath.row]
             self.label.isHidden = false
             self.label.text = tageData.name ?? ""
+            self.label.font = UIFont.systemFont(ofSize: tageData.tagFontSize)
             self.label.textColor = tageData.selected ? UIColor.white : UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
             self.backgroundColor = tageData.selected ? UIColor(red: 0, green: 1, blue: 0, alpha: 1) : UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
             break

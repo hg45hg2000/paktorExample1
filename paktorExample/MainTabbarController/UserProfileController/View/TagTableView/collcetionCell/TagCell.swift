@@ -27,6 +27,7 @@ class TagCell: UICollectionViewCell {
         case .tag(let tagArray):
             let tag = tagArray[indexPath.row]
             self.tagName.text = tag.name ?? ""
+            self.tagName.font = UIFont.systemFont(ofSize: tag.tagFontSize)
             self.tagName.textColor = tag.selected ? UIColor.white : UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
             self.backgroundColor = tag.selected ? UIColor(red: 0, green: 1, blue: 0, alpha: 1) : UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
         default:break
