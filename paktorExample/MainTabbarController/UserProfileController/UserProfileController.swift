@@ -13,17 +13,22 @@ let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 
 class UserProfileController: BaseViewController {
-
+    
     var dataTypes :Array<tabelCellType>!
     
     var header : StretchHeader!
     
-    var tableView : UITableView!
+    var tableView : UITableView!{
+        didSet{
+            tableView.register(UINib.init(nibName: "TableCollectionCell", bundle: nil), forCellReuseIdentifier:TableCollectionCell.TableCollectionCellID)
+            tableView.register(UINib.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: TableViewCell.TableViewCellID)
+        }
+    }
     
     var navigationView = NavigationBarView()
-
+    
     var collectionViewHeight : CGFloat = 0
-       
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -33,25 +38,28 @@ class UserProfileController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataTypes  = [
-            tabelCellType.collectioView(CollectionCellType.tag(
-                [Tag(name: "sdfsdfsd", selected: false),Tag(name: "sdfsdfs", selected: false),
-                 Tag(name: "sdfsdf", selected: false),Tag(name: "sdfsdf", selected: false),Tag(name: "sdfsdfs", selected: false)])),
-        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
-        tabelCellType.tableview(InformCelltype.text([TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank")])),
-        tabelCellType.tableview(InformCelltype.silder([SilderData(value:1)])),
-        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
-        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
-        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
-        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
-        tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!]))
-        ]
-        
+        setupData()
         setupTableView()
         setupHeaderView()
         navigatBarItem()
     }
     
+    private func setupData(){
+        dataTypes  = [
+            tabelCellType.collectioView(CollectionCellType.tag(
+                [Tag(name: "sdfsdfsd", selected: false),Tag(name: "sdfsdfs", selected: false),
+                 Tag(name: "sdfsdf", selected: false),Tag(name: "sdfsdf", selected: false),Tag(name: "sdfsdfs", selected: false)])),
+            tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+            tabelCellType.tableview(InformCelltype.text([TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank"),TextData(leftText: "fuck", rightText: "gank")])),
+            tabelCellType.tableview(InformCelltype.silder([SilderData(value:1)])),
+            tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+            tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+            tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+            tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!])),
+            tabelCellType.collectioView(CollectionCellType.image([UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!,UIImage (named: "photo_sample_01")!]))
+        ]
+        
+    }
     
     private func setupTableView(){
         
@@ -60,12 +68,10 @@ class UserProfileController: BaseViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         view.addSubview(tableView)
-        tableView.register(UINib.init(nibName: "TableCollectionCell", bundle: nil), forCellReuseIdentifier:TableCollectionCell.TableCollectionCellID)
-        tableView.register(UINib.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: TableViewCell.TableViewCellID)
     }
     
     private func navigatBarItem(){
-
+        
         let navibarHeight : CGFloat = navigationController!.navigationBar.bounds.height
         let statusbarHeight : CGFloat = UIApplication.shared.statusBarFrame.size.height
         navigationView = NavigationBarView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: navibarHeight + statusbarHeight))
@@ -94,6 +100,7 @@ class UserProfileController: BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - SelectedEvent
     fileprivate func  selectedEvent(indexPath: IndexPath){
         switch dataTypes[indexPath.section] {
         case .collectioView(let collectioncellType):
@@ -127,7 +134,7 @@ extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
         }
     }
     public func numberOfSections(in tableView: UITableView) -> Int{
-         return dataTypes.count
+        return dataTypes.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -139,10 +146,10 @@ extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
         
         switch dataTypes[indexPath.section] {
         case .collectioView(let collection):
-             let tagcell = tableView.dequeueReusableCell(withIdentifier: TableCollectionCell.TableCollectionCellID, for: indexPath) as! TableCollectionCell
-             tagcell.configureCellData(CellType: collection)
-             tagcell.delegate = self
-             tagcell.sectionIndex = indexPath.section
+            let tagcell = tableView.dequeueReusableCell(withIdentifier: TableCollectionCell.TableCollectionCellID, for: indexPath) as! TableCollectionCell
+            tagcell.configureCellData(CellType: collection)
+            tagcell.delegate = self
+            tagcell.sectionIndex = indexPath.section
             return tagcell
         case .tableview(let InformCelltype):
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.TableViewCellID, for: indexPath) as! TableViewCell
@@ -151,14 +158,11 @@ extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
             tableViewCell.delegate = self
             return tableViewCell
         }
-        
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         switch dataTypes[indexPath.section] {
         case .collectioView( let collectiontype):
-             return collectiontype.collectionCellHeight
+            return collectiontype.collectionCellHeight
         case .tableview(let tableViewType):
             return tableViewType.tableviewCellHeight
         }
@@ -175,7 +179,7 @@ extension UserProfileController:TableViewCellDelegate{
     
     func TableViewCellSelectIndexPath(indexPath:IndexPath){
         
-       self.selectedEvent(indexPath: indexPath)
+        self.selectedEvent(indexPath: indexPath)
         
     }
 }

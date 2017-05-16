@@ -45,7 +45,7 @@ static CGFloat const ChatCellHeight = 50;
 }
 
 - (void)setupSearchController{
-
+    
     UISearchBar *searchbar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
     searchbar.searchBarStyle = UISearchBarStyleMinimal;
     [searchbar setPlaceholder:@"Search your Matches"];

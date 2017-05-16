@@ -9,7 +9,7 @@
 import UIKit
 
 class HomePageController: BaseViewController,CollectionPushAndPoppable{
-
+    
     @IBOutlet weak var collectionView: UICollectionView?{
         didSet{
             collectionView?.register(UINib.init(nibName: "PersonProfileCell", bundle: nil), forCellWithReuseIdentifier: PersonProfileCellID)
@@ -17,12 +17,12 @@ class HomePageController: BaseViewController,CollectionPushAndPoppable{
         }
     }
     var sourceCell: UICollectionViewCell?
-
+    
     @IBOutlet weak var checkImageView: ChoiceImageView!
     
     var sourceview: UIView!
     
-    var  personalArray : [String] = ["","",""]
+    var personalArray : [String] = ["","",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +46,7 @@ extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource
         return cell
     }
     
-    
-    
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-//        let selectedCell = collectionView.cellForItem(at: indexPath)
-//        sourceCell = selectedCell
-//        let viewcontroller = UIViewController()
-//        viewcontroller.view.backgroundColor = UIColor.white
-//        self.navigationController?.pushViewController(viewcontroller, animated: true)
         
     }
 }
@@ -67,7 +60,6 @@ extension HomePageController: PersonProfileCellDelegate{
     
     public func personEndChoiceProfileCell(at IndexPath: IndexPath!, swipeDirection Direction: SwipeDirection){
         
-        
         switch Direction {
         case .Left:
             self .deleteDataAtIndex(index: IndexPath)
@@ -75,7 +67,6 @@ extension HomePageController: PersonProfileCellDelegate{
             self .deleteDataAtIndex(index: IndexPath)
         default:break
         }
-        
         checkImageView.changeType(ImageViewType: .Blank)
     }
     
