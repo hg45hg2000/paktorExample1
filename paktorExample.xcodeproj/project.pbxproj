@@ -37,11 +37,13 @@
 		485D0FC51EB74EFF006DEFAD /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FBC1EB74EFF006DEFAD /* FlowLayout.swift */; };
 		485D0FC61EB74EFF006DEFAD /* InformCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FBD1EB74EFF006DEFAD /* InformCell.swift */; };
 		485D0FC71EB74EFF006DEFAD /* InformCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485D0FBE1EB74EFF006DEFAD /* InformCell.xib */; };
-		485D0FC81EB74EFF006DEFAD /* TagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FBF1EB74EFF006DEFAD /* TagTableCell.swift */; };
-		485D0FC91EB74EFF006DEFAD /* TagTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485D0FC01EB74EFF006DEFAD /* TagTableCell.xib */; };
+		485D0FC81EB74EFF006DEFAD /* TableCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D0FBF1EB74EFF006DEFAD /* TableCollectionCell.swift */; };
+		485D0FC91EB74EFF006DEFAD /* TableCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485D0FC01EB74EFF006DEFAD /* TableCollectionCell.xib */; };
 		4864275A1EBAD18C00D18003 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486427591EBAD18C00D18003 /* NavigationBarView.swift */; };
 		489BDC581EC9AD620082D5A9 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BDC561EC9AD620082D5A9 /* TagCell.swift */; };
 		489BDC591EC9AD620082D5A9 /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489BDC571EC9AD620082D5A9 /* TagCell.xib */; };
+		48D5ACFA1ECA99AE006FE83E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5ACF81ECA99AE006FE83E /* TableViewCell.swift */; };
+		48D5ACFB1ECA99AE006FE83E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D5ACF91ECA99AE006FE83E /* TableViewCell.xib */; };
 		7D9E9C354801663D59A47889 /* Pods_paktorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A9B01D3DBF2CDBE92E9066 /* Pods_paktorExample.framework */; };
 		CB847238B4A8F14E42BD33EE /* Pods_paktorExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA542C360B68B2854B43C19 /* Pods_paktorExampleUITests.framework */; };
 /* End PBXBuildFile section */
@@ -113,11 +115,13 @@
 		485D0FBC1EB74EFF006DEFAD /* FlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		485D0FBD1EB74EFF006DEFAD /* InformCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformCell.swift; sourceTree = "<group>"; };
 		485D0FBE1EB74EFF006DEFAD /* InformCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformCell.xib; sourceTree = "<group>"; };
-		485D0FBF1EB74EFF006DEFAD /* TagTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableCell.swift; sourceTree = "<group>"; };
-		485D0FC01EB74EFF006DEFAD /* TagTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagTableCell.xib; sourceTree = "<group>"; };
+		485D0FBF1EB74EFF006DEFAD /* TableCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCollectionCell.swift; sourceTree = "<group>"; };
+		485D0FC01EB74EFF006DEFAD /* TableCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCollectionCell.xib; sourceTree = "<group>"; };
 		486427591EBAD18C00D18003 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		489BDC561EC9AD620082D5A9 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		489BDC571EC9AD620082D5A9 /* TagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
+		48D5ACF81ECA99AE006FE83E /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		48D5ACF91ECA99AE006FE83E /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		5A017A953985BE0E4260592C /* Pods-paktorExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExampleTests/Pods-paktorExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE64907F1BECDE745C2F2857 /* Pods-paktorExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExampleUITests/Pods-paktorExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CA158E5586E0163A4EC6E1D2 /* Pods-paktorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paktorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-paktorExample/Pods-paktorExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -388,12 +392,13 @@
 		485D0FB71EB74EFF006DEFAD /* TagTableView */ = {
 			isa = PBXGroup;
 			children = (
+				48D5ACF71ECA996A006FE83E /* TableViewCell */,
 				485D0FB81EB74EFF006DEFAD /* collcetionCell */,
 				485D0FBC1EB74EFF006DEFAD /* FlowLayout.swift */,
 				485D0FBD1EB74EFF006DEFAD /* InformCell.swift */,
 				485D0FBE1EB74EFF006DEFAD /* InformCell.xib */,
-				485D0FBF1EB74EFF006DEFAD /* TagTableCell.swift */,
-				485D0FC01EB74EFF006DEFAD /* TagTableCell.xib */,
+				485D0FBF1EB74EFF006DEFAD /* TableCollectionCell.swift */,
+				485D0FC01EB74EFF006DEFAD /* TableCollectionCell.xib */,
 			);
 			path = TagTableView;
 			sourceTree = "<group>";
@@ -414,6 +419,15 @@
 				486427591EBAD18C00D18003 /* NavigationBarView.swift */,
 			);
 			path = NavigationBarView;
+			sourceTree = "<group>";
+		};
+		48D5ACF71ECA996A006FE83E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				48D5ACF81ECA99AE006FE83E /* TableViewCell.swift */,
+				48D5ACF91ECA99AE006FE83E /* TableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		5FC4ABFFCF6F080C81AF8730 /* Frameworks */ = {
@@ -545,8 +559,9 @@
 			files = (
 				489BDC591EC9AD620082D5A9 /* TagCell.xib in Resources */,
 				485D0FC71EB74EFF006DEFAD /* InformCell.xib in Resources */,
-				485D0FC91EB74EFF006DEFAD /* TagTableCell.xib in Resources */,
+				485D0FC91EB74EFF006DEFAD /* TableCollectionCell.xib in Resources */,
 				4811631C1EA5E9C600E7AA92 /* LaunchScreen.storyboard in Resources */,
+				48D5ACFB1ECA99AE006FE83E /* TableViewCell.xib in Resources */,
 				481163191EA5E9C600E7AA92 /* Assets.xcassets in Resources */,
 				481164021EA9BB8700E7AA92 /* PersonProfileCell.xib in Resources */,
 				481163171EA5E9C600E7AA92 /* Main.storyboard in Resources */,
@@ -724,7 +739,7 @@
 				481164111EA9BCA500E7AA92 /* stackLayout.m in Sources */,
 				481164181EA9C24300E7AA92 /* Color.swift in Sources */,
 				4811642D1EA9F95000E7AA92 /* BaseViewController.m in Sources */,
-				485D0FC81EB74EFF006DEFAD /* TagTableCell.swift in Sources */,
+				485D0FC81EB74EFF006DEFAD /* TableCollectionCell.swift in Sources */,
 				481164321EAA0A2700E7AA92 /* UserProfileController.swift in Sources */,
 				4811641B1EA9DC7000E7AA92 /* ChoiceImageView.swift in Sources */,
 				4811640B1EA9BB9500E7AA92 /* UIView+Screenshot.swift in Sources */,
@@ -733,6 +748,7 @@
 				4811641D1EA9E90A00E7AA92 /* ProFileView.swift in Sources */,
 				485D0FC61EB74EFF006DEFAD /* InformCell.swift in Sources */,
 				485D0FC51EB74EFF006DEFAD /* FlowLayout.swift in Sources */,
+				48D5ACFA1ECA99AE006FE83E /* TableViewCell.swift in Sources */,
 				489BDC581EC9AD620082D5A9 /* TagCell.swift in Sources */,
 				481164091EA9BB9500E7AA92 /* CollectionPushAndPoppable.swift in Sources */,
 				481164231EA9F8DA00E7AA92 /* ChatViewController.m in Sources */,

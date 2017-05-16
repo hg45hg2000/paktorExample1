@@ -60,7 +60,8 @@ class UserProfileController: BaseViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         view.addSubview(tableView)
-        tableView.register(UINib.init(nibName: "TagTableCell", bundle: nil), forCellReuseIdentifier:TagTableCell.TagTableCellID)
+        tableView.register(UINib.init(nibName: "TableCollectionCell", bundle: nil), forCellReuseIdentifier:TableCollectionCell.TableCollectionCellID)
+        tableView.register(UINib.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: TableViewCell.TableViewCellID)
     }
     
     private func navigatBarItem(){
@@ -92,6 +93,23 @@ class UserProfileController: BaseViewController {
     func leftButtonAction() {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    fileprivate func  selectedEvent(indexPath: IndexPath){
+        switch dataTypes[indexPath.section] {
+        case .collectioView(let collectioncellType):
+            switch collectioncellType {
+            case .tag(var tagArray):
+                print(" slected \(tagArray[indexPath.row].selected)")
+                tagArray[indexPath.row].selected = !tagArray[indexPath.row].selected
+                print(" slected \(tagArray[indexPath.row].selected)")
+            default:break
+            }
+            break
+        case .tableview( _):
+            break
+        }
+        print("selected data type \(dataTypes[indexPath.section])")
+    }
 }
 
 extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
@@ -118,11 +136,22 @@ extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tagcell = tableView.dequeueReusableCell(withIdentifier: TagTableCell.TagTableCellID, for: indexPath) as! TagTableCell
-            tagcell.configureCellData(CellType: dataTypes[indexPath.section])
-            tagcell.delegate = self
-            tagcell.sectionIndex = indexPath.section
-        return tagcell
+        
+        switch dataTypes[indexPath.section] {
+        case .collectioView(let collection):
+             let tagcell = tableView.dequeueReusableCell(withIdentifier: TableCollectionCell.TableCollectionCellID, for: indexPath) as! TableCollectionCell
+             tagcell.configureCellData(CellType: collection)
+             tagcell.delegate = self
+             tagcell.sectionIndex = indexPath.section
+            return tagcell
+        case .tableview(let InformCelltype):
+            let tableViewCell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.TableViewCellID, for: indexPath) as! TableViewCell
+            tableViewCell.configureCell(CellType: InformCelltype)
+            tableViewCell.sectionIndex = indexPath.section
+            tableViewCell.delegate = self
+            return tableViewCell
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -135,24 +164,19 @@ extension UserProfileController:UITableViewDelegate,UITableViewDataSource{
         }
     }
 }
-extension UserProfileController:TagTableCellDelegate{
+extension UserProfileController:TableCollectionCellDelegate{
     
-    func TageTableSelectIndexPath(indexPath:IndexPath){
+    func TableCollectionCellSelectIndexPath(indexPath:IndexPath){
         
-        switch dataTypes[indexPath.section] {
-        case .collectioView(let collectioncellType):
-            switch collectioncellType {
-            case .tag(var tagArray):
-                print(" slected \(tagArray[indexPath.row].selected)")
-                tagArray[indexPath.row].selected = !tagArray[indexPath.row].selected
-                print(" slected \(tagArray[indexPath.row].selected)")
-            default:break
-            }
-            break
-        case .tableview( _):
-            break
-        }
-        print("selected data type \(dataTypes[indexPath.section])")
+        self.selectedEvent(indexPath: indexPath)
+    }
+}
+extension UserProfileController:TableViewCellDelegate{
+    
+    func TableViewCellSelectIndexPath(indexPath:IndexPath){
+        
+       self.selectedEvent(indexPath: indexPath)
+        
     }
 }
 

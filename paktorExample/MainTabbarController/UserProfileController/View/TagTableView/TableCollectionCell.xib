@@ -12,17 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TagTableCellid" rowHeight="181" id="KGk-i7-Jjw" customClass="TagTableCell" customModule="paktorExample" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCollectionCellid" rowHeight="181" id="KGk-i7-Jjw" customClass="TableCollectionCell" customModule="paktorExample" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="357" height="181"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="357" height="180.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Spe-hm-XiF">
-                        <rect key="frame" x="0.0" y="-0.5" width="357" height="181"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </tableView>
                     <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gRT-Fa-be7">
                         <rect key="frame" x="0.0" y="0.0" width="357" height="180.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,17 +43,12 @@
                     <constraint firstAttribute="trailingMargin" secondItem="Wuk-by-tOO" secondAttribute="trailing" constant="8" id="Lqe-4C-1xc"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Wuk-by-tOO" secondAttribute="bottom" constant="1" id="MeH-Hj-XB3"/>
                     <constraint firstItem="gRT-Fa-be7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="RQS-rP-H2U"/>
-                    <constraint firstItem="Spe-hm-XiF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ScA-RH-vOT"/>
                     <constraint firstItem="gRT-Fa-be7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XgX-UA-xyL"/>
-                    <constraint firstItem="Spe-hm-XiF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="dIo-d7-5qD"/>
-                    <constraint firstItem="Spe-hm-XiF" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="kW6-SH-6zD"/>
                     <constraint firstItem="Wuk-by-tOO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="qe8-HI-WIY"/>
-                    <constraint firstItem="Spe-hm-XiF" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="zR4-Ys-y34"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="collectionView" destination="gRT-Fa-be7" id="vrj-WO-icu"/>
-                <outlet property="tableView" destination="Spe-hm-XiF" id="QsQ-Eb-fiE"/>
             </connections>
             <point key="canvasLocation" x="50.5" y="50.5"/>
         </tableViewCell>

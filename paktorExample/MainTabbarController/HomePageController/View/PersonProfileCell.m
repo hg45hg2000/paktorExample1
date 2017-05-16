@@ -10,7 +10,7 @@
 #import "paktorExample-Swift.h"
 
 NSTimeInterval backToAnimationTime = 0.3;
-CGFloat moveDetectConstants = 150;
+CGFloat moveDetectConstants = 110;
 
 @interface PersonProfileCell()<UIGestureRecognizerDelegate>{
     

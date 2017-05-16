@@ -31,7 +31,7 @@ class HomePageController: BaseViewController,CollectionPushAndPoppable{
         
     }
 }
-extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource,PersonProfileCellDelegate {
+extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource{
     
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
@@ -46,16 +46,35 @@ extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource
         return cell
     }
     
-    public func personEndChoiceProfileCell(at IndexPath: IndexPath!, swipeDirection Direction: SwipeDirection){
     
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+//        let selectedCell = collectionView.cellForItem(at: indexPath)
+//        sourceCell = selectedCell
+//        let viewcontroller = UIViewController()
+//        viewcontroller.view.backgroundColor = UIColor.white
+//        self.navigationController?.pushViewController(viewcontroller, animated: true)
+        
+    }
+}
+extension HomePageController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PopInAndOutAnimator(operation: operation)
+    }
+}
 
-            switch Direction {
-            case .Left:
-                self .deleteDataAtIndex(index: IndexPath)
-            case .Right:
-                self .deleteDataAtIndex(index: IndexPath)
-            default:break
-            }
+extension HomePageController: PersonProfileCellDelegate{
+    
+    public func personEndChoiceProfileCell(at IndexPath: IndexPath!, swipeDirection Direction: SwipeDirection){
+        
+        
+        switch Direction {
+        case .Left:
+            self .deleteDataAtIndex(index: IndexPath)
+        case .Right:
+            self .deleteDataAtIndex(index: IndexPath)
+        default:break
+        }
         
         checkImageView.changeType(ImageViewType: .Blank)
     }
@@ -76,7 +95,7 @@ extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource
         print("delete index \(index.row)")
         personalArray.remove(at: index.row)
         self.collectionView?.deleteItems(at: [IndexPath(row: index.row, section: 0)])
-        self.collectionView?.performBatchUpdates({ 
+        self.collectionView?.performBatchUpdates({
             
         }, completion: { (finsh) in
             if finsh {
@@ -85,25 +104,12 @@ extension HomePageController:UICollectionViewDelegate,UICollectionViewDataSource
         })
     }
     private func addData(){
-           self.collectionView?.performBatchUpdates({
+        self.collectionView?.performBatchUpdates({
             self.personalArray.insert("", at: 0)
             self.collectionView?.insertItems(at: [IndexPath(row: 0, section: 0)])
-           }, completion: { (finsin) in
-        
-       })
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-//        let selectedCell = collectionView.cellForItem(at: indexPath)
-//        sourceCell = selectedCell
-//        let viewcontroller = UIViewController()
-//        viewcontroller.view.backgroundColor = UIColor.white
-//        self.navigationController?.pushViewController(viewcontroller, animated: true)
-        
+        }, completion: { (finsin) in
+            
+        })
     }
 }
-extension HomePageController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return PopInAndOutAnimator(operation: operation)
-    }
-}
+
